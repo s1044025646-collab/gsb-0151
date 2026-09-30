@@ -1,0 +1,19 @@
+{
+  "name": "grayblock-codec",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local grayscale 8x8 block DCT compression, rebuild and error analysis backend (custom container, not JPEG compatible)",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "demo": "npm run build && node dist/demo/run-demo.js",
+    "start": "npm run build && node dist/bin/start-api.js",
+    "stop": "node dist/bin/stop-api.js",
+    "cli": "npm run build && node dist/cli/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.7.0"
+  }
+}
