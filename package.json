@@ -1,0 +1,24 @@
+{
+  "name": "grayscale-block-codec",
+  "version": "1.0.0",
+  "description": "Local 8-bit grayscale block compression backend: own container format, 8x8 orthonormal DCT, quantization, zigzag and zero-run coding. Not JPEG compatible.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "bin": {
+    "gbc": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.json && node --no-warnings --test dist/test/*.test.js",
+    "demo": "tsc -p tsconfig.json && node --no-warnings dist/scripts/demo.js",
+    "start": "tsc -p tsconfig.json && node --no-warnings dist/src/api/server.js",
+    "stop": "node scripts/stop.mjs",
+    "clean": "node scripts/clean.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.6.0"
+  }
+}
